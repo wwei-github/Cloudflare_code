@@ -4,11 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./service-worker.js');
-  });
-}
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+serviceWorkerRegistration.register()
 
 ReactDOM.render(
   <React.StrictMode>
